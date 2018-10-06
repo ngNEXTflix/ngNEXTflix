@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'plb-app-root',
+  selector: 'nextflix-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

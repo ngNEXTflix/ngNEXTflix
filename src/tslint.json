@@ -117,13 +117,13 @@
       "directive-selector": [
         true,
         "attribute",
-        "plb",
+        "nextflix",
         "camelCase"
       ],
       "component-selector": [
         true,
         "element",
-        "plb",
+        "nextflix",
         "kebab-case"
       ],
       "no-output-on-prefix": true,

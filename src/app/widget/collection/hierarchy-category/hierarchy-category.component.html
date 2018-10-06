@@ -19,13 +19,13 @@
 		[ngClass]="{'invisible': nodeHoverState && !isNodeShiftAnimating}"
 		[ngStyle]="{right: calculateInactiveRowPosition() + '%'}"
 		*ngIf="leftInactiveShouldExist()">
-		<plb-generic-node
+		<nextflix-generic-node
 			*ngFor="let entry of leftInactiveRow; index as i"
 			[@slideNodes]="slideDirection"
 			[@shiftNodes]="triggerShift(-1)"
 			[preventHover]="true"
 			[viewModel]="entry">
-		</plb-generic-node>
+		</nextflix-generic-node>
 		<div style='display: none;' [@slideNodes]="slideDirection"
 			(@slideNodes.done)="nodeSlideAnimationEnd($event)" (@slideNodes.start)="nodeSlideAnimationStart($event)">
 		</div>
@@ -53,7 +53,7 @@
 				</svg>
 			</div>
 		</div>
-		<plb-generic-node
+		<nextflix-generic-node
 			class="node-{{entry.id}}"
 			*ngFor="let entry of activeRow; index as i"
 			[@slideNodes]="slideDirection"
@@ -66,7 +66,7 @@
 			[preventHover]="handlePreventHover()"
 			(hoverState)="handleHoverState($event, entry, i)"
 			(openPlaycardDetails)="setActivePlay($event, entry, i)">
-		</plb-generic-node>
+		</nextflix-generic-node>
 		<div *ngIf="!rightInactiveRow && !nodeHoverState" class="col-1 col-1-aspect-ratio"></div>
 		<div class="col-1 col-1-aspect-ratio right-preview"
 			*ngIf="rightInactiveRow && !nodeHoverState"
@@ -98,13 +98,13 @@
 	<div class="row right inactive"
 		[ngStyle]="{left: calculateInactiveRowPosition() + '%'}" *ngIf="!nodeHoverState || isNodeShiftAnimating"
 		(window:resize)="calculateInactiveRowPosition()">
-		<plb-generic-node
+		<nextflix-generic-node
 			*ngFor="let entry of rightInactiveRow; index as i"
 			[@slideNodes]="slideDirection"
 			[@shiftNodes]="triggerShift(5)"
 			[preventHover]="true"
 			[viewModel]="entry">
-		</plb-generic-node>
+		</nextflix-generic-node>
 		<div style='display: none;'
 			[@slideNodes]="slideDirection"
 			(@slideNodes.done)="nodeSlideAnimationEnd($event)"
@@ -112,6 +112,6 @@
 		</div>
 	</div>
 	<div *ngIf="selectedPlay && isPlayCardDetails" class="playcard-details-container">
-		<plb-playcard-details (closePlaycardDetails)="removeActivePlay()" [inputViewModel]="selectedPlay"></plb-playcard-details>
+		<nextflix-playcard-details (closePlaycardDetails)="removeActivePlay()" [inputViewModel]="selectedPlay"></nextflix-playcard-details>
 	</div>
 </div>

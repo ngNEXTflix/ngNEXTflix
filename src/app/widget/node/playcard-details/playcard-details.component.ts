@@ -12,7 +12,7 @@ import { GenericDetailsComponent } from '../generic-details/generic-details.comp
 import { trigger, style, transition, animate, AnimationEvent } from '@angular/animations';
 
 @Component({
-  selector: 'plb-playcard-details',
+  selector: 'nextflix-playcard-details',
   templateUrl: './playcard-details.component.html',
   animations: [
     trigger('fade', [

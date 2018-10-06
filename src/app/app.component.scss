@@ -1,6 +1,6 @@
 @import "./shared/styles/main.styles.scss";
 
-div.playbooks-bootstrap-wrapper {
+div.nextflix-bootstrap-wrapper {
   padding-top: 100px;
   height: 100%;
   overflow-y: hidden;
@@ -8,7 +8,7 @@ div.playbooks-bootstrap-wrapper {
   background-color: $white;
 }
 
-// Global Styles for Playbooks
+// Global Styles for NEXTflix
 ::ng-deep {
   @import "~bootstrap/scss/bootstrap.scss";
   @import "./shared/styles/main.styles.scss";

@@ -1,4 +1,4 @@
-<plb-playcard-node 
+<nextflix-playcard-node 
     class="playcard-node playcard-node-{{viewModel.id}}"
     [ngStyle]="{ 'min-height': minimumHeight + 'px' }"
     [ngClass]="{ 'playcard-node-clicked': isSelected }"
@@ -11,4 +11,4 @@
     (openPlaycardDetails)="viewPlaycardDetails()"
     (hoverState)="handleHoverState($event)"
     (window:resize)="resetMinimumHeight()">
-</plb-playcard-node>
+</nextflix-playcard-node>

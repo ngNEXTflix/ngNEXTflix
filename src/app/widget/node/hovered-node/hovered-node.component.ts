@@ -2,7 +2,7 @@ import { Input, Component, OnInit } from '@angular/core';
 import { IPlayCardNode } from '../../../shared/models/IPlayCardNode';
 
 @Component({
-  selector: 'plb-hovered-node',
+  selector: 'nextflix-hovered-node',
   templateUrl: './hovered-node.component.html',
   styleUrls: ['./hovered-node.component.scss']
 })
@@ -40,7 +40,7 @@ export class HoveredNodeComponent implements OnInit {
   }
 
   public getPic() : string {
-    return this.pic || 'https://s3-us-west-1.amazonaws.com/walkme.external/Playbooks/Assets/Playcomingsoon.png';
+    return this.pic;
   }
 
   public calculateBottomInfoPaddingTop() : number {

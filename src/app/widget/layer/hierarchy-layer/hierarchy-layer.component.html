@@ -1,12 +1,12 @@
 <div class="layer-container">
     <div class="flex-xl-nowrap">
         <div *ngIf="viewModel && viewModel.children">
-            <plb-hierarchy-category 
+            <nextflix-hierarchy-category 
                 *ngFor="let category of viewModel.children" 
                 [viewModel]="category"
                 [isActive]="isActiveCategory(category)"
                 (setActive)="setActiveCategory($event)">
-            </plb-hierarchy-category>
+            </nextflix-hierarchy-category>
         </div>
     </div>
 </div>

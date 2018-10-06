@@ -3,7 +3,7 @@ import { INode } from '../../../shared/models/INode';
 import { HierarchyService } from '../../../core/services/hierarchy.service';
 
 @Component({
-  selector: 'plb-hierarchy-layer',
+  selector: 'nextflix-hierarchy-layer',
   templateUrl: './hierarchy-layer.component.html',
   styleUrls: ['./hierarchy-layer.component.scss']
 })

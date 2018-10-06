@@ -47,16 +47,16 @@
     </div>
     <div class="hovered-node-container" 
       *ngIf="viewModel.isHovered">
-      <plb-hovered-node  
+      <nextflix-hovered-node  
         [viewModel]="viewModel">
-      </plb-hovered-node>
+      </nextflix-hovered-node>
     </div>
   </div>
-  <plb-playcard-side
+  <nextflix-playcard-side
     [viewModel]="viewModel"
     [preventPlaycardDetails]="preventPlaycardDetails"
     (openPlaycardDetails)="viewPlaycardDetails()">
-  </plb-playcard-side>
+  </nextflix-playcard-side>
 </div>
 <div class="animation button-text"
   [ngClass]="{'focus-out': viewModel.nodeScaleValue === 'focusOut'}"

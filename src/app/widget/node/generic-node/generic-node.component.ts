@@ -3,7 +3,7 @@ import { Input, Component, Output, EventEmitter, HostBinding, ElementRef } from 
 import { INode } from '../../../shared/models/INode';
 
 @Component({
-  selector: 'plb-generic-node',
+  selector: 'nextflix-generic-node',
   templateUrl: './generic-node.component.html',
   styleUrls: ['./generic-node.component.scss']
 })
