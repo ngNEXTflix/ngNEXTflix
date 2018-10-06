@@ -4,7 +4,7 @@
     'hovered': viewModel.isHovered,
     'animating': viewModel.isNodeScaleAnimating
   }">
-  <plb-icon 
+  <nextflix-icon 
     *ngFor="let icon of iconList; let x = index;"
     [@slideIcon]="triggerAnimation(x)"
     [ngClass]="[icon, x.toString(), 'of' + iconTotal]"
@@ -12,5 +12,5 @@
     [toolTip]="true"
     [state]="getButtonState(icon)"
     (click)="buttonHandler(icon, $event)">
-  </plb-icon>
+  </nextflix-icon>
 </div>

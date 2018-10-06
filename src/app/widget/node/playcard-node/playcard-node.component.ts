@@ -8,7 +8,7 @@ import { AnimationDistanceService } from './animation-distance/animation-distanc
 import { IPlayCardNode } from '../../../shared/models/IPlayCardNode';
 
 @Component({
-  selector: 'plb-playcard-node',
+  selector: 'nextflix-playcard-node',
   templateUrl: './playcard-node.component.html',
   animations: [
     trigger('scaleNodes', [

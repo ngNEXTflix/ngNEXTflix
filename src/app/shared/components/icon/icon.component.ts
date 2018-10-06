@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'plb-icon',
+  selector: 'nextflix-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })

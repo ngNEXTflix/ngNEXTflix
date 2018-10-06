@@ -19,9 +19,9 @@ export class AnimationDistanceService {
 
   // #CTOR#
   constructor() {
-    this.SMALL_WINDOW_SIZE = 'plb-screen-small';
-    this.MEDIUM_WINDOW_SIZE = 'plb-screen-medium';
-    this.LARGE_WINDOW_SIZE = 'plb-screen-large';
+    this.SMALL_WINDOW_SIZE = 'nextflix-screen-small';
+    this.MEDIUM_WINDOW_SIZE = 'nextflix-screen-medium';
+    this.LARGE_WINDOW_SIZE = 'nextflix-screen-large';
     this.animationDistanceMapper = {};
     this.animationDistanceMapper['standard-y'] = {
       '4': {

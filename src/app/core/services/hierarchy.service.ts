@@ -38,7 +38,7 @@ export class HierarchyService {
                 "challenge": "This is the description",
                 "solution": "This the details",
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 26,
                   "playcardId": 148,
@@ -66,7 +66,7 @@ export class HierarchyService {
                 "challenge": "This is the description",
                 "solution": "This is the details",
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 25,
                   "playcardId": 149,
@@ -95,7 +95,7 @@ export class HierarchyService {
                 "challenge": "This is the description",
                 "solution": "This is the details",
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 24,
                   "playcardId": 150,
@@ -125,7 +125,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": null,
                 "PlaycardImages": []
               }
@@ -143,7 +143,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "indication": "default",
                 "TemplateEditorAccount": null,
                 "PlaycardImages": []
@@ -162,7 +162,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": null,
                 "PlaycardImages": []
               }
@@ -180,7 +180,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": null,
                 "PlaycardImages": []
               }
@@ -198,7 +198,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 2,
                   "playcardId": 277,
@@ -220,7 +220,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": null,
                 "PlaycardImages": []
               }
@@ -247,7 +247,7 @@ export class HierarchyService {
                 "challenge": "This is the description",
                 "solution": "This is the details",
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 23,
                   "playcardId": 151,
@@ -279,7 +279,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 10,
                   "playcardId": 339,
@@ -301,7 +301,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 9,
                   "playcardId": 340,
@@ -325,7 +325,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 8,
                   "playcardId": 341,
@@ -347,7 +347,7 @@ export class HierarchyService {
                 "challenge": null,
                 "solution": null,
                 "video": "https://www.youtube.com/embed/Hp92T0Iw2cc",
-                "implement": "http://justinpinili.github.io/",
+                "implement": "https://ngnextflix.github.io/",
                 "TemplateEditorAccount": {
                   "id": 7,
                   "playcardId": 342,

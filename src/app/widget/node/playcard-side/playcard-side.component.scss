@@ -6,7 +6,7 @@ div.action-holder {
   position: relative;
   bottom: -74px;
   z-index: 150;
-  plb-icon {
+  nextflix-icon {
     position: absolute;
     cursor: pointer;
     bottom: 71px;
@@ -24,7 +24,7 @@ div.action-holder {
     &.icon-total-2 {
       bottom: 76px;
     }
-    plb-icon {
+    nextflix-icon {
       position: relative;
       opacity: 1;
       &.of2 {
@@ -40,16 +40,16 @@ div.action-holder {
       &.icon-total-3 {
         bottom: -110px;
       }
-      plb-icon {
+      nextflix-icon {
         position: absolute;
         bottom: 182px;
-        & + plb-icon {
+        & + nextflix-icon {
           bottom: 145px;
         }
-        & + plb-icon + plb-icon {
+        & + nextflix-icon + nextflix-icon {
           bottom: 108px;
         }
-        & + plb-icon + plb-icon + plb-icon {
+        & + nextflix-icon + nextflix-icon + nextflix-icon {
           bottom: 71px;
         }
       }
@@ -57,7 +57,7 @@ div.action-holder {
   }
 }
 
-plb-icon.hide {
+nextflix-icon.hide {
   visibility: hidden;
   cursor: default;
 }

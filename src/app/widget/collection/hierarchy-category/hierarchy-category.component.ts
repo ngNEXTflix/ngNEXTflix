@@ -9,7 +9,7 @@ import { HierarchyService } from '../../../core/services/hierarchy.service';
 
 
 @Component({
-  selector: 'plb-hierarchy-category',
+  selector: 'nextflix-hierarchy-category',
   templateUrl: './hierarchy-category.component.html',
   animations: [
     trigger('slideNodes', [
