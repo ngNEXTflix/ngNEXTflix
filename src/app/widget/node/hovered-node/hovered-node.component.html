@@ -1,0 +1,22 @@
+<div class="hovered-node"
+  [ngStyle]="{'background-image' : 'url(' + getPic() + ')'}">
+  <div class="bottom-container">
+    <div class="button bottom-info" 
+      [ngClass]="{
+        'view-modules':!comingSoon,
+        'wm-default-button':!comingSoon,
+        'wm-default-disabled':comingSoon
+      }"
+      [ngStyle]="{
+        'padding-top': calculateBottomInfoPaddingTop() + '%'
+      }">
+      <div class="play-info"
+        *ngIf="viewModel.nodeScaleValue !== 'focusOut'">
+        <div class="play-title">{{name}}</div>
+        <div class="play-desc">
+          {{description}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

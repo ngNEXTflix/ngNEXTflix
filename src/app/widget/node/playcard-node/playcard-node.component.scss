@@ -1,0 +1,172 @@
+@import "../../../shared/styles/main.styles.scss";
+
+:host {
+    display: inherit;
+	width: 100%;
+	height: 100%;
+}
+
+div.playcard-container {
+    height: inherit;
+    width: inherit;
+    position: inherit;
+}
+
+div.small-playcard-node-container {
+    height: inherit;
+    width: inherit;
+    position: inherit;
+}
+
+div.card-body {
+    height: 100%;
+    width: 100%;
+    background: $white no-repeat 0 0;
+    background-size: 100.5%;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    cursor: pointer;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    &.coming-soon {
+        pointer-events: none;
+        cursor: default;
+        background-size: 100%;
+    }
+
+    div.action-holder {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 22%;
+        div.coming-soon {
+            background-color: rgb(85, 85, 85);
+        }
+    }
+
+    div.button {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        &.wm-default-disabled {
+            text-transform: uppercase;
+        }
+        .button-text {
+            position: relative;
+            color: #F8F8F8;	
+            font-family: "Open Sans";	
+            font-size: 14px;	
+            font-weight: 400;	
+            line-height: 19px;	
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    div.card-body {
+        div.button {
+            .button-text {
+                top: 23%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1640px) {
+    div.card-body {
+        div.button {
+            .button-text {
+                top: 20%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    div.card-body {
+        div.button {
+            .button-text {
+                top: 16%;
+            }
+        }
+    }
+}
+
+div.button-text.animation {
+    color: #F8F8F8;	
+    font-family: "Open Sans";	
+    font-size: 14px;	
+    font-weight: 400;	
+    line-height: 22px;	
+    text-align: center;
+    text-transform: uppercase;
+    width: 200%;
+    position: absolute;
+    padding-left: 4%;
+    padding-right: 4%;
+    bottom: -47%;
+    right: -50%;
+    div.name {
+        position: relative;
+    }
+    div.description {
+        opacity: 0;
+        font-family: "Open Sans";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: center;
+        text-transform: none;
+        min-height: 34px;
+        position: relative;
+    }
+    &.focus-out {
+        width: 100%;
+        right: 0%;
+        padding-left: 2%;
+        padding-right: 2%;
+        div.description {
+            opacity: 1;
+        }
+    }
+}
+
+div.hovered-node-container {
+    width: inherit;
+    position: relative;
+    height: inherit;
+}
+
+div.node {
+    box-shadow: $node-hover-shadow;
+    &.not-selected {
+        opacity: 0.5;
+    }
+    div.focused {
+        height: inherit;
+    }
+}
+
+.hover-selected {
+    border: 6px solid $primary;
+    border-radius: 6px;
+    width: 98%;
+    height: 102%;
+    bottom: -1%;
+    left: 1%;
+    position: absolute;
+}
+
+div.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $primary;
+    left: 46%;
+    position: absolute;
+    z-index: 20;
+}

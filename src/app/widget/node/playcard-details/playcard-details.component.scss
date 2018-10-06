@@ -1,0 +1,146 @@
+@import "../../../shared/styles/main.styles.scss";
+
+div.playcard-details {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+
+	plb-icon {
+		position: absolute;
+		cursor: pointer;
+	}
+
+	div.row {
+		div.left-column {
+			h4, h5, .info {
+				margin-top: 30px;
+				margin-bottom: 0px;
+			}
+			div.challenge, div.solution, div.value {
+			    margin-top: 5%;
+			}
+			div.left-node-arrow {
+			    cursor: pointer;
+			}
+		}
+		div.right-column {
+			padding-right: 5px;
+			div.right-node-arrow {
+	    		cursor: pointer;
+			}
+		}
+
+		div.back-button {
+			background-color: $gray;
+		}
+		div.add-to-editor {
+			background-color: $primary;
+		}
+	}
+	background-color: rgba(229,232,238,0.2);
+	box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.25);
+
+	a.wm-link2 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(25/18);
+    text-decoration: underline;
+    color: $blue;
+    font-family: "Open Sans";
+	}
+	
+	div.action-buttons {
+		margin-top: 35px;
+	}
+}
+div.playcard-laptop {
+	div.playcard-img {
+		position: absolute;
+    	width: 479px;
+        height: 300px;
+        border: none;
+        margin-left: 109px;
+        margin-top: 28px;
+        background-size: cover;
+	}
+	background-image: url('https://s3-us-west-1.amazonaws.com/walkme.external/Playbooks/Assets/Laptop_v3_697x447.png');
+	height: 388px;
+	width: 697px;
+}
+
+div.title, div.parent-category {
+	max-width: 34ch;
+	text-overflow: ellipsis;
+}
+
+div.challenge > span.challenge-header, div.solution > span.solution-header, div.value > span.value-header {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: calc(30/18);
+	color: $primary;
+	font-family: "Open Sans";
+}
+
+button.back-button {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: calc(17/12);
+	text-transform: uppercase;
+	color: $dark-gray;
+	font-family: "Open Sans";
+	height: 47px;	
+	width: 210px;	
+	border: 1px solid $gray;	
+	border-radius: 2px;	
+	background-color: $white;	
+	cursor: pointer;
+}
+button.add-to-editor, button.remove-from-ppt, button.add-to-ppt {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: calc(17/12);
+	text-transform: uppercase;
+	color: $white;
+	font-family: "Open Sans";
+	min-height: 46px;	
+	min-width: 198px;	
+	border: 1px solid $primary;	
+	border-radius: 2px;	
+	background-color: $primary;
+	cursor: pointer;
+}
+
+button.remove-from-ppt {
+	font-size: 10px;
+	line-height: calc(15/10);
+}
+
+div.left-arrow, div.right-arrow {
+	cursor: pointer;
+}
+div.change-pic {
+	div, h6 {
+		display: inline;
+	}
+}
+
+div.close-playcard-details {
+	height: 35px;
+	width: 35px;
+	cursor: pointer;
+	margin-top: 15px;
+	padding-left: 10px;
+	svg {
+		height: 32px;
+		width: 22px;
+	}
+}
+
+button.add-to-editor.disabled, button.remove-from-ppt.disabled, button.add-to-ppt.disabled {
+	cursor: not-allowed;
+	color: $gray;
+	background-color: $light-gray;
+}
+div.wm-articleText {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}

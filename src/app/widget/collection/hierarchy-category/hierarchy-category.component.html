@@ -1,0 +1,117 @@
+<div class="category-container" (mouseenter)="categoryEnter()" (mouseleave)="categoryLeave()" *ngIf="viewModel && viewModel.children && viewModel.children.length > 0">
+	<div class="row">
+		<div class="col-1 col-1-aspect-ratio">
+		</div>
+		<div class="col-8">
+			<h3> {{viewModel.name.toUpperCase()}} </h3>
+		</div>
+		<div class="col-2">
+			<div class="scroll-indicator pull-right" *ngIf="pageIndicators"
+				[ngClass]="{'invisible': !hoverState}">
+				<div *ngFor="let page of pageIndicators"
+					[ngClass]="{'active': page === pageIndex }" class="page-indicator">
+				</div>
+			</div>
+		</div>
+		<div class="col-1 col-1-aspect-ratio"></div>
+	</div>
+	<div class="row left inactive"
+		[ngClass]="{'invisible': nodeHoverState && !isNodeShiftAnimating}"
+		[ngStyle]="{right: calculateInactiveRowPosition() + '%'}"
+		*ngIf="leftInactiveShouldExist()">
+		<plb-generic-node
+			*ngFor="let entry of leftInactiveRow; index as i"
+			[@slideNodes]="slideDirection"
+			[@shiftNodes]="triggerShift(-1)"
+			[preventHover]="true"
+			[viewModel]="entry">
+		</plb-generic-node>
+		<div style='display: none;' [@slideNodes]="slideDirection"
+			(@slideNodes.done)="nodeSlideAnimationEnd($event)" (@slideNodes.start)="nodeSlideAnimationStart($event)">
+		</div>
+	</div>
+	<div class="row category-row"  *ngIf="activeRow" [ngClass]="{'row-margin': !selectedPlay && !isActive }"
+		(mouseleave)="resetAnimation()">
+		<div *ngIf="!leftInactiveRow && !nodeHoverState" class="col-1 col-1-aspect-ratio">
+		</div>
+		<div *ngIf="leftInactiveRow && !nodeHoverState"
+			class="col-1 col-1-aspect-ratio left-preview" (click)="getPrevPage($event)"
+			[@shiftNodes]="triggerShift(-1)"
+			[ngClass]="{'hover': canShowPrev() && !isSlideAnimating}">
+			<div class="left-arrow arrow"
+				[ngClass]="{'invisible': !canShowPrev() || isSlideAnimating || nodeHoverState}">
+				<svg width="30px" height="60px" viewBox="0 0 30 60"
+					version="1.1" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink">
+					<defs></defs>
+					<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon id="Page-1" fill="#000000"
+							transform="translate(15.000000, 30.000000) scale(-1, 1) translate(-15.000000, -30.000000) "
+							points="3.75568876 0 0 4.29314612 22.4886225 30.0002525 0 55.7068539 3.75568876 60 30 30.0002525">
+						</polygon>
+					</g>
+				</svg>
+			</div>
+		</div>
+		<plb-generic-node
+			class="node-{{entry.id}}"
+			*ngFor="let entry of activeRow; index as i"
+			[@slideNodes]="slideDirection"
+			[@shiftNodes]="triggerShift(i)"
+			(@shiftNodes.done)="nodeShiftAnimationEnd($event, i)"
+			(@shiftNodes.start)="nodeShiftAnimationStart($event, i)"
+			[viewModel]="entry"
+			[isCurrentNode]="currentNodeIndex === i"
+			[isSelected]="isActive && entry === selectedPlay"
+			[preventHover]="handlePreventHover()"
+			(hoverState)="handleHoverState($event, entry, i)"
+			(openPlaycardDetails)="setActivePlay($event, entry, i)">
+		</plb-generic-node>
+		<div *ngIf="!rightInactiveRow && !nodeHoverState" class="col-1 col-1-aspect-ratio"></div>
+		<div class="col-1 col-1-aspect-ratio right-preview"
+			*ngIf="rightInactiveRow && !nodeHoverState"
+			(click)="getNextPage($event)"
+			[ngClass]="{'hover': canShowNext() && !isSlideAnimating}"
+			[@shiftNodes]="triggerShift(5)">
+			<div class="right-arrow arrow"
+				[ngClass]="{'invisible': !canShowNext() || isSlideAnimating || nodeHoverState}">
+				<svg width="30px" height="60px" viewBox="0 0 30 60"
+					version="1.1" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink">
+					<defs></defs>
+					<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g id="Navigation-button---Default" transform="translate(-55.000000, -110.000000)" fill="#000000">
+							<polygon id="Page-1"
+								points="58.7556888 110 55 114.293146 77.4886225 140.000253 55 165.706854 58.7556888 170 85 140.000253">
+							</polygon>
+						</g>
+					</g>
+				</svg>
+			</div>
+		</div>
+		<div style='display: none;'
+			[@slideNodes]="slideDirection"
+			(@slideNodes.done)="nodeSlideAnimationEnd($event)"
+			(@slideNodes.start)="nodeSlideAnimationStart($event)">
+		</div>
+	</div>
+	<div class="row right inactive"
+		[ngStyle]="{left: calculateInactiveRowPosition() + '%'}" *ngIf="!nodeHoverState || isNodeShiftAnimating"
+		(window:resize)="calculateInactiveRowPosition()">
+		<plb-generic-node
+			*ngFor="let entry of rightInactiveRow; index as i"
+			[@slideNodes]="slideDirection"
+			[@shiftNodes]="triggerShift(5)"
+			[preventHover]="true"
+			[viewModel]="entry">
+		</plb-generic-node>
+		<div style='display: none;'
+			[@slideNodes]="slideDirection"
+			(@slideNodes.done)="nodeSlideAnimationEnd($event)"
+			(@slideNodes.start)="nodeSlideAnimationStart($event)">
+		</div>
+	</div>
+	<div *ngIf="selectedPlay && isPlayCardDetails" class="playcard-details-container">
+		<plb-playcard-details (closePlaycardDetails)="removeActivePlay()" [inputViewModel]="selectedPlay"></plb-playcard-details>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+<div class="playcard-details container-fluid" 
+	*ngIf="viewModel"
+	[@fade]="triggerFade(true)"
+	(@fade.done)="fadeAnimationEnd($event)">
+	<div class="row">
+		<div class="left-column col-5 offset-1"
+			[@fade]="triggerFade(false)"
+			(@fade.done)="fadeAnimationEnd($event)">
+			<h4 class="title">
+				{{viewModel.name}}&nbsp;
+				<plb-icon class="heart"
+					[iconType]="'heart'"
+					[state]="getButtonState(isPlayInFavorites)"
+					(click)="buttonHandler(isPlayInFavorites, $event)">
+				</plb-icon>
+			</h4>
+			<a class="wm-link2" href="{{viewModel.implement}}" target="_blank">Learn More ></a>
+		</div>
+		<div class="right-column col-5">
+			<div class="close-playcard-details pull-right" (click)="clear($event)">
+				<svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<defs></defs>
+					<g id="Playbooks-Editor-MVP---Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+						<g id="12D---Play-Image-examples" transform="translate(-1330.000000, -145.000000)" stroke="#DDDDDD" stroke-width="3">
+							<g id="X-Button---Defalut" transform="translate(1328.000000, 144.000000)">
+								<path d="M16.5161133,3.33333333 L4.16666667,15.9769694" id="Line-2" transform="translate(10.000000, 10.000000) scale(1, -1) translate(-10.000000, -10.000000) "></path>
+								<path d="M16.5161133,3.33333333 L4.16666667,15.9769694" id="Line-2"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="left-column col-5 offset-1"
+			[@fade]="triggerFade(false)"
+			(@fade.done)="fadeAnimationEnd($event)">
+			<div class="challenge wm-articleText info">
+				<span class="challenge-header">Description:</span>
+				{{viewModel.challenge}}
+			</div>
+			<div class="solution wm-articleText info">
+				<span class="solution-header">Details: </span>
+				{{viewModel.solution}}
+			</div>
+
+			<div class="action-buttons col-12"
+				[@fade]="triggerFade(false)"
+				(@fade.done)="fadeAnimationEnd($event)">
+				<button class="add-to-editor disabled col-2" 
+					title="Coming soon!" 
+					*ngIf="viewModel && viewModel.TemplateEditorAccount">
+					ADD TO EDITOR
+				</button>
+				<button class="col-2 offset-1"
+					[ngClass]="{'remove-from-ppt': isPlaySaved, 'add-to-ppt': !isPlaySaved}"
+					(click)="pptButtonHandler(isPlaySaved)">
+					{{ isPlaySaved ? 'REMOVE FROM MY PPT BUILDER' : 'ADD TO MY PPT BUILDER' }}
+				</button>
+			</div>
+		</div>
+		<div class="right-column col-5 video-and-screenshots">
+			<div *ngIf="doesPlayCardHaveVideo" class="video-container embed-responsive embed-responsive-16by9">
+				<iframe [src]="videoUrl"
+					allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
+					name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
+					oallowfullscreen msallowfullscreen></iframe>
+			</div>
+			<div *ngIf="!doesPlayCardHaveVideo" class="row">
+				<div class="playcard-laptop">
+					<div class="playcard-img has_pic"
+							*ngIf="hasPic" [ngStyle]="{ 'background-image' : 'url(' + viewModel.pic[currentPicIndex] + ')' }"></div>
+					<div class="playcard-img" *ngIf="!hasPic"></div>
+				</div>
+				<div class="additional-info"
+					[@fade]="triggerFade(false)"
+					(@fade.done)="fadeAnimationEnd($event)">
+					<div *ngIf="hasMultiplePics" class="change-pic">
+						<div class="left-arrow" (click)="prevPicture()">
+							<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<defs></defs>
+								<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g id="Left---Screenshot-arrow">
+										<circle id="Oval" stroke="#616775" fill="#616775" cx="11.5" cy="11.5" r="11.5"></circle>
+										<polygon id="Triangle" fill="#FFFFFF" transform="translate(10.000000, 12.000000) scale(-1, 1) rotate(90.000000) translate(-10.000000, -12.000000) " points="10 6 16 18 4 18"></polygon>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<h6>See More Screenshot Examples</h6>
+						<div class="right-arrow" (click)="nextPicture()">
+							<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs></defs>
+							<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Screenshot-Arrows">
+									<circle id="Oval" stroke="#616775" fill="#616775" cx="11.5" cy="11.5" r="11.5"></circle>
+									<polygon id="Triangle" fill="#FFFFFF" transform="translate(13.000000, 12.000000) rotate(90.000000) translate(-13.000000, -12.000000) " points="13 6 19 18 7 18"></polygon>
+								</g>
+							</g>
+						</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

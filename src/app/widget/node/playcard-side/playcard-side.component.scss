@@ -1,0 +1,63 @@
+:host {
+  position: absolute;
+}
+
+div.action-holder {
+  position: relative;
+  bottom: -74px;
+  z-index: 150;
+  plb-icon {
+    position: absolute;
+    cursor: pointer;
+    bottom: 71px;
+    z-index: 100;
+    opacity: 0;
+    &.ate {
+      cursor: default;
+    }
+  }
+  &.hovered {
+    bottom: 74px;
+    &.icon-total-3 {
+      bottom: 37px;
+    }
+    &.icon-total-2 {
+      bottom: 76px;
+    }
+    plb-icon {
+      position: relative;
+      opacity: 1;
+      &.of2 {
+        bottom: -5px;
+      }
+    }
+    
+    &.animating {
+      bottom: -74px;
+      &.icon-total-2 {
+        bottom: -147px;
+      }
+      &.icon-total-3 {
+        bottom: -110px;
+      }
+      plb-icon {
+        position: absolute;
+        bottom: 182px;
+        & + plb-icon {
+          bottom: 145px;
+        }
+        & + plb-icon + plb-icon {
+          bottom: 108px;
+        }
+        & + plb-icon + plb-icon + plb-icon {
+          bottom: 71px;
+        }
+      }
+    }
+  }
+}
+
+plb-icon.hide {
+  visibility: hidden;
+  cursor: default;
+}

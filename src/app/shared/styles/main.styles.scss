@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$primary: #4DA86B;
+$secondary: #76D396;
+$tertiary: #3F915A;
+
+$success: $primary;
+
+$blue: #3A99CF;
+$black: #1B2432;
+$true-black: #000;
+$true-black-shadow: rgba(0,0,0,0.25);
+$white: #FFFFFF;
+
+$gray: #9B9B9B;
+$calm-gray: #B7B7B7;
+$light-gray: #E5E8EE;
+$dark-gray: #4A4A4A;
+$light-gray-shadow: rgba(229,232,238,0.25);
+
+$site-border: #F1F1F1;
+$footer-shadow: rgba(184,184,184,0.5);
+$node-hover-shadow: inset 0 0 6px 0 rgba(0,0,0,0.5), 0 0 6px 0 rgba(0,0,0,0.25);
+$disabled: $light-gray;

@@ -1,0 +1,87 @@
+@import "../../styles/main.styles.scss";
+
+:host {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 30px;
+  display: inline;
+}
+
+div.tip-container {
+  position:absolute;
+  div.tip {
+    position: relative;
+    background-color: $black;
+    color: $white;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    text-align: center;
+    padding: 2px;
+    top: 8px;
+    &.eye {
+      right: 220%;
+      width: 210%;
+    }
+    &.ate {
+      right: 260%;
+      width: 250%;
+    }
+    &.ppt {
+      right: 280%;
+      width: 270%;
+      &.add {
+        right: 230%;
+        width: 220%;
+      }
+    }
+    &.heart {
+      right: 293%;
+      width: 280%;
+      &.add {
+        right: 263%;
+        width: 250%;
+      }
+    }
+  }
+  div.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid #1B2432;
+    left: -23%;
+    position: absolute;
+    z-index: 20;
+    top: 51%;
+    &.ppt {
+      left: -16%;
+    }
+    &.heart {
+      left: -20%;
+    }
+  }
+}
+
+span.icon-container {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid $white;	
+  border-radius: 50%;
+  background-color: rgba(77,168,107,0.8);
+  margin-bottom: 5px;
+  display: inline-block;
+  &.remove {
+    background-color: $white;
+    border: 1px solid rgba(77,168,107,0.8);
+  }
+}
+
+svg {
+  position: relative;
+  top: -2px;
+  left: 0px;
+}

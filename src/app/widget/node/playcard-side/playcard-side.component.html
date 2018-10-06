@@ -1,0 +1,16 @@
+<div class="action-holder icon-total-{{iconTotal}}"
+  [ngStyle]="{'right': getActionHolderRightValue() + 'px'}"
+  [ngClass]="{
+    'hovered': viewModel.isHovered,
+    'animating': viewModel.isNodeScaleAnimating
+  }">
+  <plb-icon 
+    *ngFor="let icon of iconList; let x = index;"
+    [@slideIcon]="triggerAnimation(x)"
+    [ngClass]="[icon, x.toString(), 'of' + iconTotal]"
+    [iconType]="icon"
+    [toolTip]="true"
+    [state]="getButtonState(icon)"
+    (click)="buttonHandler(icon, $event)">
+  </plb-icon>
+</div>

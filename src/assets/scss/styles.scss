@@ -1,0 +1,285 @@
+@import "~font-awesome/css/font-awesome.min.css";
+@import "_variables";
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+html {
+  height: 100%; 
+  overflow:auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: $font;
+  color: #000;
+}
+
+.body.open {
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1B2432;
+  line-height: 22px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/*basic button*/
+.btn {
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  font-family: $font;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+/* button with green borders and color transparent background*/
+.btn-transparent {
+  border-color: #4DA86B;
+  background: #fff;
+  color: #4DA86B;
+
+  &:hover {
+    border-color: #39784e;
+    color: #39784e;
+  }
+}
+
+/* button with green background*/
+.btn-green {
+  margin-left: 4px;
+  border-color: #4DA86B;
+  background: #4DA86B;
+  color: #fff;
+
+  &:hover {
+    background: #39784e;
+  }
+}
+
+/* button with grey borders and color*/
+.btn-grey {
+  border-color: #a6a3a3;
+  color: #a6a3a3;
+
+  &:hover {
+    border-color: #000;
+    color: #000;
+  }
+}
+
+/* button with red borders and color*/
+.btn-error {
+  border-color: #ff5252;
+  background-color: transparent;
+  color: #ff5252;
+  min-width: 100px;
+
+  &:hover {
+    background: #ff5252;
+    color: #fff;
+  }
+}
+
+
+/* NG-PRIME Button */
+.ui-button {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin-right: .1em;
+  text-decoration: none !important;
+  cursor: pointer;
+  text-align: center;
+  zoom: 1;
+  overflow: visible; /* the overflow property removes extra width in IE */
+}
+
+.ui-button-icon-only {
+  width: 2em;
+}
+
+/*button text element */
+.ui-button .ui-button-text {
+  display: block;
+  line-height: normal;
+}
+
+/*button text element */
+.ui-button .ui-button-text {
+  display: block;
+  line-height: normal;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: .25em 1em;
+}
+
+.ui-button-icon-only .ui-button-text {
+  padding: .25em;
+  text-indent: -9999999px;
+}
+
+.ui-button-text-icon-left .ui-button-text {
+  padding: .25em 1em .25em 2.1em;
+}
+
+.ui-button-text-icon-right .ui-button-text {
+  padding: .25em 2.1em .25em 1em;
+}
+
+/*button icon element(s) */
+.ui-button-icon-only .fa,
+.ui-button-text-icon-left .fa,
+.ui-button-text-icon-right .fa {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.ui-button-icon-only .fa {
+  top: 50%;
+  left: 50%;
+  margin-top: -.5em;
+  margin-left: -.6em;
+}
+
+.ui-button-icon-left {
+  left: .5em;
+}
+
+.ui-button-icon-right {
+  right: .5em;
+}
+
+/*button sets*/
+.ui-buttonset .ui-button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* workarounds */
+button.ui-button::-moz-focus-inner {
+  border: 0; padding: 0; /* reset extra padding in Firefox */
+}
+
+
+
+/* css style for ACE template-builder code editor */
+
+.ace_scroller {
+  height:calc(50vh - 186px) !important;
+  border-radius: 2px;
+}
+
+.css-wrapper {
+
+  .ace_content {
+    border-radius: 2px;
+    background-color: #34393c;
+  }
+
+  .ace_gutter {
+    background-color: #34393c !important;
+  }
+}
+
+.ace_content {
+  height:100% !important;
+}
+
+.ace_gutter {
+  background-color: #41484C !important;
+}
+
+.ace_print-margin {
+  display: none;
+}
+
+.ace_gutter-cell {
+  padding-left: 15px;
+  text-align: left;
+}
+
+/****************************** CHECKBOX *********************************************************/
+.walkme-chk-green {
+  position: relative;
+
+  input {
+    visibility: hidden;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #5f5f5f;
+    border-radius: 2px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+         -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+  }
+
+  label:after {
+    content:'';
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 6px;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-style: solid;
+    border-color: #4da868;
+    border-width: 0 0 1px 1px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  input:checked + label:after {
+    opacity: 1;
+  }
+}

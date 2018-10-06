@@ -1,0 +1,76 @@
+<div class="playcard-container" 
+  (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()">
+  <div class="small-playcard-node-container"
+    (click)="viewPlaycardDetails()"
+    (onscroll)="setHovered(false)"
+    [@scaleNodes]="triggerAnimation('playcard')" 
+    (@scaleNodes.done)="nodeScaleAnimationEnd($event)"
+    (@scaleNodes.start)="nodeScaleAnimationStart($event)">
+    <div class="playcard-node-container">
+      <div class="node"
+        *ngIf="viewModel && !viewModel.isHovered"
+        [ngClass]="{
+          'hover': isCurrentNode || viewModel.isHovered,
+          'embed-responsive embed-responsive-1-4': !viewModel.isHovered
+        }">
+        <div [ngClass]="{
+          'embed-responsive-item': !viewModel.isHovered,
+          'focused': viewModel.isHovered
+        }">
+          <div class="card-body" 
+            [ngStyle]="{'background-image' : 'url(' + pic + ')' }" 
+            [class.coming-soon]="comingSoon" 
+            id="tile_{{viewModel.id}}">
+            <div [ngClass]="{
+              'action-holder': true, 
+              'action-holder-center': !comingSoon
+            }">
+              <div class="button" [ngClass]="{
+                'view-modules':!comingSoon, 
+                'wm-default-button':!comingSoon, 
+                'wm-default-disabled':comingSoon
+              }">
+                <div class="button-text"
+                  *ngIf="!viewModel.isNodeScaleAnimating">
+                  {{name}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!viewModel.isHovered && isSelected">
+        <div class="hover-selected"></div>
+        <div class="arrow-down"></div>
+      </div>
+    </div>
+    <div class="hovered-node-container" 
+      *ngIf="viewModel.isHovered">
+      <plb-hovered-node  
+        [viewModel]="viewModel">
+      </plb-hovered-node>
+    </div>
+  </div>
+  <plb-playcard-side
+    [viewModel]="viewModel"
+    [preventPlaycardDetails]="preventPlaycardDetails"
+    (openPlaycardDetails)="viewPlaycardDetails()">
+  </plb-playcard-side>
+</div>
+<div class="animation button-text"
+  [ngClass]="{'focus-out': viewModel.nodeScaleValue === 'focusOut'}"
+  *ngIf="viewModel.isNodeScaleAnimating">
+  <div class="name"
+    [ngStyle]="{'bottom': getNameBottomValue() + 'px'}"
+    [@slideText]="triggerAnimation('name-text')">
+    {{name}}
+  </div>
+  <div class="description"
+    [ngStyle]="{'bottom': getDescriptionBottomValue() + 'px'}"
+    [@fadeElement]="triggerAnimation('description')"
+    (@fadeElement.start)="fadeElementAnimationStart()"
+    (@fadeElement.done)="fadeElementAnimationEnd($event)">
+    {{fadeElementDescription}}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<plb-playcard-node 
+    class="playcard-node playcard-node-{{viewModel.id}}"
+    [ngStyle]="{ 'min-height': minimumHeight + 'px' }"
+    [ngClass]="{ 'playcard-node-clicked': isSelected }"
+    *ngIf="isPlaycardNode()"
+    [nodeDetails]="viewModel" 
+    [isCurrentNode]="isCurrentNode"
+    [isSelected]="isSelected"
+    [preventHover]="preventHover"
+    [preventPlaycardDetails]="preventPlaycardDetails"
+    (openPlaycardDetails)="viewPlaycardDetails()"
+    (hoverState)="handleHoverState($event)"
+    (window:resize)="resetMinimumHeight()">
+</plb-playcard-node>

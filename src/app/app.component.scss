@@ -1,0 +1,156 @@
+@import "./shared/styles/main.styles.scss";
+
+div.playbooks-bootstrap-wrapper {
+  padding-top: 100px;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: $white;
+}
+
+// Global Styles for Playbooks
+::ng-deep {
+  @import "~bootstrap/scss/bootstrap.scss";
+  @import "./shared/styles/main.styles.scss";
+
+  body {
+    overflow: hidden;
+    font-family: "Open Sans";
+
+    > p, .wm-bodyP {
+      font-size: 12px;
+      line-height: calc(17/12);
+      color: $black;
+      font-family: "Open Sans";
+    }
+  }
+
+  h1, .wm-title1 {
+    font-weight: 200;
+    font-size: 22px;
+    line-height: calc(30/12);
+    color: $black;
+    font-family: "Open Sans";
+  }
+
+  h2, .wm-title2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20/14);
+    text-transform: uppercase;
+    color: $black;
+    font-family: "Open Sans";
+  }
+
+  h3, .wm-title3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(20/14);
+    color: $black;
+    font-family: "Open Sans";
+  }
+
+  a, .wm-link {
+    font-size: 12px;
+    line-height: calc(17/12);
+    text-decoration: underline;
+    color: $blue;
+    font-family: "Open Sans";
+  }
+
+  .wm-toast {
+    font-size: 12px;
+    line-height: calc(17/12);
+    text-transform: uppercase;
+    color: $white;
+    font-family: "Open Sans";
+  }
+
+  h4, .wm-title4 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: calc(31/22);
+    color: $black;
+    font-family: "Open Sans";
+  }
+
+  h5, .wm-title5 {
+    font-size: 22px;
+    line-height: calc(31/22);
+    color: $black;
+    font-family: "Open Sans";
+  }
+
+  .wm-articleText {
+    font-size: 16px;
+    line-height: calc(28/16);
+    color: $black;
+    font-family: "Open Sans";
+  }
+
+  h6, .wm-title6 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(22/16);
+    font-style: italic;
+    color: $gray;
+    font-family: "Open Sans";
+  }
+
+  .wm-default-button {
+    font-weight: 600;
+      font-size: 12px;
+      line-height: calc(17/12);
+      text-transform: uppercase;
+      color: $white;
+      font-family: "Open Sans";
+      height: 47px;
+      width: 175px;
+      border: 1px solid $primary;
+      border-radius: 2px;
+      background-color: $primary;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+  }
+
+  .wm-secondary-button {
+    font-weight: 600;
+      font-size: 12px;
+      line-height: calc(17/12);
+      text-transform: uppercase;
+      color: $dark-gray;
+      font-family: "Open Sans";
+      height: 47px;
+      width: 175px;
+      border: 1px solid $gray;
+      border-radius: 2px;
+      background-color: $white;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .wm-default-disabled {
+    height: 47px;
+    width: 175px;
+    border-radius: 2px;
+    background-color: $light-gray;
+    margin-left: auto;
+      margin-right: auto;
+  }
+
+  .button-text {
+    height: auto;
+    width: auto;
+    color: $white;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 17px;
+    text-align: center;
+  }
+}
+
+div.margin-div {
+	height: 64px;
+}
