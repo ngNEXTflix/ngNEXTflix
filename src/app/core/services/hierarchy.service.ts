@@ -17,7 +17,7 @@ export class HierarchyService {
       "parentId": 2,
       "nodeTypeId": 3,
       "name": "Main Layer",
-      "imageUrl": "https://i.imgur.com/3FMXrB0.png",
+      "imageUrl": "https://i.imgur.com/AU5gWg5.png",
       "children": [
         {
           "id": 6,
@@ -48,7 +48,7 @@ export class HierarchyService {
                   {
                     "id": 293,
                     "playcardId": 148,
-                    "url": "https://i.imgur.com/3FMXrB0.png"
+                    "url": "https://i.imgur.com/AU5gWg5.png"
                   }
                 ]
               }
@@ -77,7 +77,7 @@ export class HierarchyService {
                     "id": 300,
                     "playcardId": 149,
                     "position": 0,
-                    "url": "https://i.imgur.com/3FMXrB0.png"
+                    "url": "https://i.imgur.com/AU5gWg5.png"
                   }
                 ]
               }
@@ -106,7 +106,7 @@ export class HierarchyService {
                     "id": 299,
                     "playcardId": 150,
                     "position": 0,
-                    "url": "https://i.imgur.com/3FMXrB0.png",
+                    "url": "https://i.imgur.com/AU5gWg5.png",
                     "seVisible": 0
                   }
                 ]
@@ -260,7 +260,7 @@ export class HierarchyService {
                     "id": 312,
                     "playcardId": 151,
                     "position": 0,
-                    "url": "https://i.imgur.com/3FMXrB0.png",
+                    "url": "https://i.imgur.com/AU5gWg5.png",
                     "seVisible": 0
                   }
                 ]
