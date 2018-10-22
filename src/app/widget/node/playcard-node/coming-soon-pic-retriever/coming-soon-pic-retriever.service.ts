@@ -7,7 +7,7 @@ export class ComingSoonPicRetrieverService {
 		'https://i.imgur.com/QjbzaKu.png',
 		'https://i.imgur.com/TFLgTBd.png',
 		'https://i.imgur.com/k4pNYkS.png',
-		'https://i.imgur.com/aUVKoJR.png',
+		'https://i.imgur.com/s96zYkq.png',
 		'https://i.imgur.com/bqL4VCA.png'
 		];
 
